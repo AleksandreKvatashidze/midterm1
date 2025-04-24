@@ -10,7 +10,7 @@ public class R21 {
         A22 a22 = new A22();
         A21 a21 = new A21();
         System.out.println("Area of a rectangle is :" + (a21.getHeight()*a21.getWidth()));
-        System.out.println("Month " + a22.getMonth() + " is " + getMonthName(a22.getMonth()));
+        System.out.println("Month is " + getMonthName(a22.getMonth()));
     }
     public static String getMonthName(int monthNumber) {
         // Create a DateFormatSymbols instance to get the month names

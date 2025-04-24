@@ -15,7 +15,7 @@ Recording match results
 
 Analyzing player performance through statistics
 
-Features
+# Features
 1. Event Management
    Create and manage sports events by providing event details like name, date, and location.
 
@@ -51,21 +51,22 @@ The system is implemented in the t3 package. Here is the breakdown of the main f
 
 
 
-Event.java           // Class to manage event details
+### Event.java           // Class to manage event details
 
-Team.java            // Class to manage teams and players
+### Team.java            // Class to manage teams and players
 
-Participant.java     // Class to manage participants (players)
+### Participant.java     // Class to manage participants (players)
 
-Match.java           // Class to manage match scheduling
+### Match.java           // Class to manage match scheduling
 
-Results.java         // Class to manage match results
+### Results.java         // Class to manage match results
 
-PlayerStatistics.java // Class for tracking player statistics (new feature)
+### PlayerStatistics.java // Class for tracking player statistics (new feature)
 
-Main.java            // Entry point for running the system
+### Main.java            // Entry point for running the system
 
-New Feature: Player Statistics
+# **New Feature: Player Statistics**
+
 Feature Overview:
 A new feature has been added to track the performance of individual players during the event. The system can now record and analyze player statistics, including:
 
@@ -78,3 +79,35 @@ Penalties
 This feature was introduced to enhance the depth of the system and provide a more detailed analysis of player performance. Event organizers can now track and evaluate how each player contributed to the team's success.
 Code Implementation:
 In the PlayerStatistics.java class, a new class was introduced to handle the tracking of statistics for individual players. Here’s a brief explanation of how the code works:
+package t3;
+
+/**
+* Tracks the performance of individual players during the event.
+  */
+  public class PlayerStatistics {
+  private Participant participant;
+  private int goalsScored;
+  private int assists;
+  private int penalties;
+
+  public PlayerStatistics(Participant participant) {
+  this.participant = participant;
+  this.goalsScored = 0;
+  this.assists = 0;
+  this.penalties = 0;
+  }
+
+  public void recordGoal() {
+  goalsScored++;
+  }
+
+  public void recordAssist() {
+  assists++;
+  }
+
+  public void recordPenalty() {
+  penalties++;
+  }
+
+  // Getters and Setters
+  }
